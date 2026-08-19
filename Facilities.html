@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Facilities</title>
+        <script>
+            const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+            const authPages = ["login.html", "register.html"];
+
+            if (authPages.includes(currentPage)) {
+                if (localStorage.getItem("isLoggedIn") === "true") {
+                    window.location.href = "index.html";
+                }
+            } else if (localStorage.getItem("isLoggedIn") !== "true") {
+                window.location.href = "login.html";
+            }
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }   
+            header{
+                text-align:center;
+                padding:20px;
+                background: linear-gradient(to bottom,#b0edf9,#04344c);
+            }
+            
+            header h1{
+                font-size:auto;
+                color: rgb(255, 251, 12);
+                
+            }
+            
+            header p{
+                margin-top:10px;
+                font-size:18px;
+            }
+            
+            /* Navigation */
+            
+            nav{
+                background:#1b1b1b;
+                display:flex;
+                justify-content:center;
+                gap:30px;
+                padding:15px;
+                flex-wrap:wrap;
+            }
+            
+            nav a{
+                color:white;
+                text-decoration:none;
+                font-size:18px;
+                transition:0.3s;
+            }
+            section{
+                padding:20px;
+            }
+            marquee{
+                margin-top:20px;
+                padding:10px;
+                background:#e0f7fa;
+                border-radius:8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            nav a:hover{
+                color:yellow;
+            }
+            footer{
+                background:#0d5c63;
+                color:white;
+                text-align:center;
+                padding:20px;
+                margin-top:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Sadguru Gadghe Maharaj College</h1>
+            <p>Facilities</p>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Admission.html">Admission</a>
+            <a href="Academics.html">Academics</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="Facilities.html">Facilities</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <section>
+            <h2 style="text-align:center; margin-top:20px;">Our Facilities</h2>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px;">
+                <div style="background:white; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:300px; padding:15px; text-align:center;">
+                    <h3>Library</h3>
+                    <p>Our library offers a vast collection of books, journals, and digital resources to support learning and research.</p>
+                </div>
+                <div style="background:white; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:300px; padding:15px; text-align:center;">
+                    <h3>Laboratories</h3>
+                    <p>State-of-the-art laboratories equipped with modern tools and technology for practical learning.</p>
+                </div>
+                <div style="background:white; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:300px; padding:15px; text-align:center;">
+                    <h3>Sports Complex</h3>
+                    <p>A well-maintained sports complex for various indoor and outdoor games to promote physical fitness.</p>
+                </div>
+                <div style="background:white; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:300px; padding:15px; text-align:center;">
+                    <h3>Hostel</h3>
+                    <p>Comfortable and secure hostel facilities for students with all necessary amenities.</p>
+                </div>
+            </div>
+            <h2 style="color: teal; font-style:bold; text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Our Facilities</h2>
+            <marquee behavior="scroll" direction="left" scrollamount="15">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROq7sohU_Yv-xd464xmiivKHHZ1g8M3iyjWl_eYCppdQ&s=10" alt="Library" style="width:200px; height:150px; margin-right:20px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiKEr1e7FdoByagSPLBvcg6kYo-3COOc5GxZWnw-c3tA&s=10" alt="Laboratory" style="width:200px; height:150px; margin-right:20px;">
+                <img src=" https://www.sgm.edu.in/images/hostel.jpg" alt="Sports Complex" style="width:200px; height:150px; margin-right:20px;">
+                <img src="https://www.sgm.edu.in/profile/chemistry/gallery/0%20(7).jpeg" alt="Hostel" style="width:200px; height:150px; margin-right:20px;">
+
+            </marquee>
+        </section>
+    </body>
+</html>
